@@ -1,16 +1,34 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<div>ja (should be different than “+ U+FE01” or “Expected”):</div>
+	<div lang="ja">字「“字”字“字”」字。“字”。「字“字”字」</div>
+	<div>ja + U+FE01:</div>
+	<div lang="ja">字「“︁字”︁字“︁字”︁」字。“︁字”︁。「字“︁字”︁字」</div>
+	<div>ja + fwid:</div>
+	<div lang="ja" class="f">字「“字”字“字”」字。“字”。「字“字”字」</div>
+	<div>ja Expected:</div>
+	<div lang="ja">
+		字「<span class="h">“</span>字<span class="f">”</span>字<span class="f"
+			>“</span
+		>字<span class="h">”</span>」字。<span class="h">“</span>字<span
+			class="h">”</span
+		>。「字<span class="f">“</span>字<span class="f">”</span>字」
+	</div>
+	<div>zh:</div>
+	<div lang="zh">字「“字”字“字”」字。“字”。「字“字”字」</div>
+	<div>zh + U+FE01:</div>
+	<div lang="zh">字「“︁字”︁字“︁字”︁」字。“︁字”︁。「字“︁字”︁字」</div>
+	<div>zh + fwid:</div>
+	<div lang="zh" class="f">字「“字”字“字”」字。“字”。「字“字”字」</div>
+	<div>zh Expected:</div>
+	<div lang="zh">
+		字「<span class="h">“</span>字<span class="f">”</span>字<span class="f"
+			>“</span
+		>字<span class="h">”</span>」字。<span class="h">“</span>字<span
+			class="h">”</span
+		>。「字“字”字」
+	</div>
+</Layout>

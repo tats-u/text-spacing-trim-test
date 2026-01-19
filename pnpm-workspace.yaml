@@ -1,0 +1,9 @@
+minimumReleaseAge: 1440
+
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+
+trustPolicy: no-downgrade
+
+trustPolicyIgnoreAfter: 43200

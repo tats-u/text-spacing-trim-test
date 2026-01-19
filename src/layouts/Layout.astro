@@ -1,0 +1,44 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="color-scheme" content="light dark" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+		<style is:global>
+			@font-face {
+				font-family: "Source Han Sans VF Remote";
+				src:
+					url("/SourceHanSans-VF.ttf.woff2") format(woff2)
+						tech(variations),
+					url("/SourceHanSans-VF.ttf.ttc") format(truetype)
+						tech(variations);
+				font-weight: 100 900;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			:root {
+				font-family:
+					Source Han Sans VF Remote,
+					sans-serif;
+			}
+
+			.f {
+				font-variant-east-asian: full-width;
+			}
+
+			.h {
+				font-feature-settings: "fwid", "halt";
+			}
+		</style>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
