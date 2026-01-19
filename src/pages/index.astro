@@ -6,7 +6,9 @@ import Layout from "../layouts/Layout.astro";
 	<div>ja (should be different than “+ U+FE01” or “Expected”):</div>
 	<div lang="ja">字「“字”字“字”」字。“字”。「字“字”字」</div>
 	<div>ja + U+FE01:</div>
-	<div lang="ja">字「“︁字”︁字“︁字”︁」字。“︁字”︁。「字“︁字”︁字」</div>
+	<div lang="ja">
+		字「“&#xFE01;字”&#xFE01;字“&#xFE01;字”&#xFE01;」字。“&#xFE01;字”&#xFE01;。「字“&#xFE01;字”&#xFE01;字」
+	</div>
 	<div>ja + fwid:</div>
 	<div lang="ja" class="f">字「“字”字“字”」字。“字”。「字“字”字」</div>
 	<div>ja Expected:</div>
@@ -20,7 +22,9 @@ import Layout from "../layouts/Layout.astro";
 	<div>zh:</div>
 	<div lang="zh">字「“字”字“字”」字。“字”。「字“字”字」</div>
 	<div>zh + U+FE01:</div>
-	<div lang="zh">字「“︁字”︁字“︁字”︁」字。“︁字”︁。「字“︁字”︁字」</div>
+	<div lang="zh">
+		字「“&#xFE01;字”&#xFE01;字“&#xFE01;字”&#xFE01;」字。“&#xFE01;字”&#xFE01;。「字“&#xFE01;字”&#xFE01;字」
+	</div>
 	<div>zh + fwid:</div>
 	<div lang="zh" class="f">字「“字”字“字”」字。“字”。「字“字”字」</div>
 	<div>zh Expected:</div>
